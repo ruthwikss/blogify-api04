@@ -4,13 +4,27 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+<<<<<<< HEAD
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+=======
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
+>>>>>>> d0f763a68ca40f8baf78aec74c8d1aee11f59b35
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+=======
   "devDependencies": {
     "nodemon": "^3.1.0"
+>>>>>>> d0f763a68ca40f8baf78aec74c8d1aee11f59b35
   }
 }
