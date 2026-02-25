@@ -6,18 +6,21 @@ const postRoutes = require("./routes/postRoutes");
 
 const app = express();
 
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/api/auth", authRoutes);
-app.use("/api/posts", postRoutes);
-
-// ✅ REQUIRED FIX
-const PORT = process.env.PORT || 5000;
-
+// Root route (for browser test)
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
+
+// Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/posts", postRoutes);
+
+// IMPORTANT: use process.env.PORT for Render
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
